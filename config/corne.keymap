@@ -21,7 +21,7 @@
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
    &kp DE_CARET  &kp DE_Q  &kp DE_W  &kp DE_E  &kp DE_R  &kp DE_T               &kp DE_Z  &kp DE_U  &kp DE_I     &kp DE_O    &kp DE_P        &kp DE_U_UMLAUT
-   &kp DE_TILDE  &kp DE_A  &kp DE_S  &kp DE_D  &ht_hp LSHIFT DE_F  &kp DE_G     &kp DE_H  &ht_hp RSHIFT  DE_J  &kp DE_K     &kp DE_L    &kp DE_O_UMLAUT  &kp DE_A_UMLAUT
+   &kp DE_TILDE  &kp DE_A  &kp DE_S  &kp DE_D  &mt LSHIFT DE_F  &kp DE_G     &kp DE_H  &mt RSHIFT DE_J  &kp DE_K     &kp DE_L    &kp DE_O_UMLAUT  &kp DE_A_UMLAUT
    &kp LSHFT     &kp DE_Y  &kp DE_X  &kp DE_C  &kp DE_V  &kp DE_B               &kp DE_N  &kp DE_M  &kp DE_COMMA  &kp DE_DOT  &kp DE_FSLH     &kp ESC
                                   &kp LGUI  &mo 1  &kp SPACE              &kp RET  &mo 2  &kp RALT
                         >;
