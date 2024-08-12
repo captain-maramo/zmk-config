@@ -50,7 +50,7 @@
                         bindings = <
    &kp DE_LT &kp DE_AT &kp DE_EXCL &kp DE_LBRC &kp DE_RBRC &kp DE_DQT      &kp DE_EQUAL &kp DE_N7 &kp DE_N8 &kp DE_N9 &kp DE_PLUS &kp DE_ASTRK
    &kp DE_PIPE &kp DE_POUND &kp DE_DLLR &kp DE_LPAR &kp DE_RPAR &kp DE_SQT      &kp DE_QMARK &kp DE_N4 &kp DE_N5 &kp DE_N6 &kp DE_MINUS &kp DE_SLASH
-   &kp DE_GT &kp DE_PRCNT &kp DE_AMPS &kp DE_LBKT &kp DE_RBKT &kp DE_ACUTE      &kp DE_N0 &kp DE_N1 &kp DE_N2 &kp DE_N4 &kp DE_BSLH &kp KP_NUM
+   &kp DE_GT &kp DE_PRCNT &kp DE_AMPS &kp DE_LBKT &kp DE_RBKT &kp DE_ACUTE      &kp DE_N0 &kp DE_N1 &kp DE_N2 &kp DE_N3 &kp DE_BSLH &kp KP_NUM
                              &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
                         >;
                 };
