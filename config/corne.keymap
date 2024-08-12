@@ -43,14 +43,14 @@
                 raise_layer {
                         display-name = "symbols";
 // -----------------------------------------------------------------------------------------
-// |     |     |     |  {  |  }  |     |   |     |     |     |     |     |     |
-// |     |     |     |  (  |  )  |     |   |     |     |     |     |     |     |
-// |     |     |     |  [  |  ]  |     |   |     |     |     |     |     |     |
+// |  <  |  @  |  !  |  {  |  }  |  "  |   |     |     |     |     |     |     |
+// |  |  |  #  |  $  |  (  |  )  |  '  |   |     |     |     |     |     |     |
+// |  >  |  %  |  &  |  [  |  ]  |  ´  |   |     |     |     |     |     |     |
 //                   | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &trans &trans &trans &kp DE_LBRC &kp DE_RBRC &trans      &trans &trans &trans &trans &trans &trans
-   &trans &trans &trans &kp DE_LPAR &kp DE_RPAR &trans      &trans &trans &trans &trans &trans &trans
-   &trans &trans &trans &kp DE_LBKT &kp DE_RBKT &trans      &trans &trans &trans &trans &trans &trans
+   &kp DE_LT &kp DE_AT &kp DE_EXCL &kp DE_LBRC &kp DE_RBRC &kp DE_DQT      &trans &trans &trans &trans &trans &trans
+   &kp DE_PIPE &kp DE_POUND &kp DE_DLLR &kp DE_LPAR &kp DE_RPAR &kp DE_SQT      &trans &trans &trans &trans &trans &trans
+   &kp DE_GT &kp DE_PRCNT &kp DE_AMPS &kp DE_LBKT &kp DE_RBKT &kp DE_ACUTE      &trans &trans &trans &trans &trans &trans
                              &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
                         >;
                 };
