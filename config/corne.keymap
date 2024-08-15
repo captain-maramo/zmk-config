@@ -12,7 +12,7 @@
 #define LINUX 0
 #define LOWER 1
 #define RAISE 2
-#define MAC   4
+#define MAC   3
 / {
         combos {
                 compatible = "zmk,combos";
