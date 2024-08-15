@@ -18,13 +18,13 @@
                 compatible = "zmk,combos";
                 combo_tomac {
                         timeout-ms = <500>;
-                        key-positions = <36 41>;
+                        key-positions = <0 1>;
                         layers = <0>;
                         bindings = <&to MAC>;
                 };
                 combo_tolinux {
                         timeout-ms = <500>;
-                        key-positions = <36 41>;
+                        key-positions = <0 2>;
                         layers = <3>;
                         bindings = <&to LINUX>;
                 };
