@@ -17,14 +17,14 @@
         combos {
                 compatible = "zmk,combos";
                 combo_tomac {
-                        timeout-ms = <50>;
-                        key-positions = <36 38 39 41>;
+                        timeout-ms = <500>;
+                        key-positions = <36 41>;
                         layers = <0>;
                         bindings = <&to MAC>;
                 };
                 combo_tolinux {
-                        timeout-ms = <50>;
-                        key-positions = <36 38 39 41>;
+                        timeout-ms = <500>;
+                        key-positions = <36 41>;
                         layers = <3>;
                         bindings = <&to LINUX>;
                 };
