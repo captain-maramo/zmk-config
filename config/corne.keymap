@@ -35,34 +35,34 @@
                 default_layer {
                         display-name = "linux";
 // -----------------------------------------------------------------------------------------
-// |  ^   |  Q  |  W  |  E  |      R     |  T  |          |  Y  |      U     |  I  |  O  |  P  |  ü   |
-// |  ~   |  A  |  S  |  D  |  F + SHFT  |  G  |          |  H  |  J + SHFT  |  K  |  L  |  ö  |  ä   |
-// | SHFT |  Z  |  X  |  C  |      V     |  B  |          |  N  |      M     |  ,  |  .  |  /  |  ß   |
-//                    | GUI |     SPC    | LWR |          | RSE |     ENT    | ALT |
+// |     ^      |    Q    |    W    |    E    |        R       |    T    |    |    Y    |        U       |      I      |     O     |       P        |       ü       |
+// |     ~      |    A    |    S    |    D    |    F + SHFT    |    G    |    |    H    |    J + SHFT    |      K      |     L     |       ö        |       ä       |
+// |   SHIFT    |    Z    |    X    |    C    |        V       |    B    |    |    N    |        M       |      ,      |     .     |       /        |       ß       |
+//                                  |   GUI   |       SPC      |   LWR   |    |   RSE   |       ENT      |     ALT     |
                         bindings = <
-   &kp DE_CARET  &kp DE_Q  &kp DE_W  &kp DE_E  &kp DE_R  &kp DE_T               &kp DE_Z  &kp DE_U  &kp DE_I     &kp DE_O    &kp DE_P        &kp DE_U_UMLAUT
-   &kp DE_TILDE  &kp DE_A  &kp DE_S  &kp DE_D  &mt LSHIFT DE_F  &kp DE_G     &kp DE_H  &mt RSHIFT DE_J  &kp DE_K     &kp DE_L    &kp DE_O_UMLAUT  &kp DE_A_UMLAUT
-   &kp LSHFT     &kp DE_Y  &kp DE_X  &kp DE_C  &kp DE_V  &kp DE_B               &kp DE_N  &kp DE_M  &kp DE_COMMA  &kp DE_DOT  &kp DE_FSLH     &kp ESC
-                                  &kp LGUI &kp SPACE  &mo 1                  &mo 2  &kp RET  &kp RALT
+   &kp DE_CARET  &kp DE_Q  &kp DE_W  &kp DE_E  &kp DE_R         &kp DE_T /*|*/ &kp DE_Z  &kp DE_U         &kp DE_I      &kp DE_O    &kp DE_P         &kp DE_U_UMLAUT
+   &kp DE_TILDE  &kp DE_A  &kp DE_S  &kp DE_D  &mt LSHIFT DE_F  &kp DE_G /*|*/ &kp DE_H  &mt RSHIFT DE_J  &kp DE_K      &kp DE_L    &kp DE_O_UMLAUT  &kp DE_A_UMLAUT
+   &kp LSHFT     &kp DE_Y  &kp DE_X  &kp DE_C  &kp DE_V         &kp DE_B /*|*/ &kp DE_N  &kp DE_M         &kp DE_COMMA  &kp DE_DOT  &kp DE_FSLH      &kp DE_SZ
+                                     &kp LGUI  &kp SPACE        &mo 1    /*|*/ &mo 2     &kp RET          &kp RALT
                         >;
                 };
                 lower_layer {
                         display-name = "settings";
 // -----------------------------------------------------------------------------------------
-// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+// |          |            |              |             |             |             |    |     |     |     |     |     |      |
+// |  BTCLR   |    BT1     |     BT2      |     BT3     |     BT4     |     BT5     |    | LFT | DWN |  UP | RGT |     |      |
+// |          |            |              |             |             |             |    |     |     |     |     |     |      |
+//                                        |             |             |             |    |     |     |     |
                         bindings = <
-   &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-   &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
-                                    &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
+   &none       &none         &none         &none         &none         &none        /*|*/ &none  &none  &none  &none  &none  &none
+   &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4 /*|*/ &none  &none  &none  &none  &none  &none
+   &none       &none         &none         &none         &none         &none        /*|*/ &none  &none  &none  &none  &none  &none
+                                           &none         &none         &none        /*|*/ &none  &none  &none
                         >;
                 };
 
                 raise_layer {
-                        display-name = "symbols";
+                        display- = "symbols";
 // -----------------------------------------------------------------------------------------
 // |  <  |  @  |  !  |  {  |  }  |  "  |   |  =  |  7  |  8  |  9  |  +  |  *  |
 // |  |  |  #  |  $  |  (  |  )  |  '  |   |  ?  |  4  |  5  |  6  |  -  |  /  |
