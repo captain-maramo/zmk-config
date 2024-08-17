@@ -29,19 +29,33 @@
                         bindings = <&to LINUX>;
                 };
         };
+        behaviors {
+                td0: tap_dance_tilde_esc {
+                        compatible = "zmk,behavior-tap-dance";
+                        #binding-cells = <0>;
+                        tapping-term-ms = <200>;
+                        bindings = <&kp DE_TILDE>, <&kp ESC>;
+                };
+                td1: tap_dance_acute_grave {
+                        compatible = "zmk,behavior-tap-dance";
+                        #binding-cells = <0>;
+                        tapping-term-ms = <200>;
+                        bindings = <&kp DE_ACUTE>, <&kp DE_GRAVE>;
+                };
+        };
         keymap {
                 compatible = "zmk,keymap";
 
                 default_layer {
                         display-name = "linux";
 // -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// |     ^      |    Q    |    W    |    E    |        R       |    T           |              |    Y             |        U       |      I      |     O     |       P        |       ü       |
-// |     ~      |    A    |    S    |    D    |    F + SHFT    |  G + Symbols   |              |    H + Symbols   |    J + SHFT    |      K      |     L     |       ö        |       ä       |
+// |   ~ + ESC  |    Q    |    W    |    E    |        R       |    T           |              |    Y             |        U       |      I      |     O     |       P        |       ü       |
+// |     ^      |    A    |    S    |    D    |    F + SHFT    |  G + Symbols   |              |    H + Symbols   |    J + SHFT    |      K      |     L     |       ö        |       ä       |
 // |            |    Z    |    X    |    C    |        V       |    B           |              |    N             |        M       |      ,      |     .     |       /        |       ß       |
 //                                  |   GUI   |       SPC      |    Backspace   |              |   RSE            |       ENT      |             |
                         bindings = <
-   &kp DE_CARET  &kp DE_Q  &kp DE_W  &kp DE_E  &kp DE_R         &kp DE_T                        &kp DE_Z          &kp DE_U         &kp DE_I      &kp DE_O    &kp DE_P         &kp DE_U_UMLAUT
-   &kp DE_TILDE  &kp DE_A  &kp DE_S  &kp DE_D  &mt LSHIFT DE_F  &lt SYMBOLS DE_G                &lt SYMBOLS DE_H  &mt RSHIFT DE_J  &kp DE_K      &kp DE_L    &kp DE_O_UMLAUT  &kp DE_A_UMLAUT
+   &td0          &kp DE_Q  &kp DE_W  &kp DE_E  &kp DE_R         &kp DE_T                        &kp DE_Z          &kp DE_U         &kp DE_I      &kp DE_O    &kp DE_P         &kp DE_U_UMLAUT
+   &kp DE_CARET  &kp DE_A  &kp DE_S  &kp DE_D  &mt LSHIFT DE_F  &lt SYMBOLS DE_G                &lt SYMBOLS DE_H  &mt RSHIFT DE_J  &kp DE_K      &kp DE_L    &kp DE_O_UMLAUT  &kp DE_A_UMLAUT
    &none         &kp DE_Y  &kp DE_X  &kp DE_C  &kp DE_V         &kp DE_B                        &kp DE_N          &kp DE_M         &kp DE_COMMA  &kp DE_DOT  &kp DE_FSLH      &kp DE_SZ
                                      &kp LGUI  &kp SPACE        &kp BSPC                        &kp RET           &kp TAB          &none
                         >;
@@ -64,15 +78,15 @@
                 symbols_layer {
                         display-name = "symbols";
 // -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// |  <        |  @          |  !         |  {         |  }         |  "          |              |  =         |  7       |  8       |  9       |  +          |  *          |
-// |  |        |  #          |  $         |  (         |  )         |  '          |              |  ?         |  4       |  5       |  6       |  -          |  /          |
-// |  >        |  %          |  &         |  [         |  ]         |  ´          |              |  0         |  1       |  2       |  3       |  \          |NMLCK        |
-//                                        | GUI        |            | SPC         |              | ENT        |          | ALT      |
+// |  <        |  @          |  !         |  {         |  }         |  "       |              |  =         |  7       |  8       |  9       |  +          |  *          |
+// |  |        |  #          |  $         |  (         |  )         |  '       |              |  ?         |  4       |  5       |  6       |  -          |  /          |
+// |  >        |  %          |  &         |  [         |  ]         |  ´ + `   |              |  0         |  1       |  2       |  3       |  \          |NMLCK        |
+//                                        | GUI        |            | SPC      |              | ENT        |          | ALT      |
                         bindings = <
-   &kp DE_LT    &kp DE_AT     &kp DE_EXCL  &kp DE_LBRC  &kp DE_RBRC  &kp DE_DQT                  &kp DE_EQUAL  &kp DE_N7  &kp DE_N8  &kp DE_N9  &kp DE_PLUS   &kp DE_ASTRK
-   &kp DE_PIPE  &kp DE_POUND  &kp DE_DLLR  &kp DE_LPAR  &kp DE_RPAR  &kp DE_SQT                  &kp DE_QMARK  &kp DE_N4  &kp DE_N5  &kp DE_N6  &kp DE_MINUS  &kp DE_SLASH
-   &kp DE_GT    &kp DE_PRCNT  &kp DE_AMPS  &kp DE_LBKT  &kp DE_RBKT  &kp DE_ACUTE                &kp DE_N0     &kp DE_N1  &kp DE_N2  &kp DE_N3  &kp DE_BSLH   &kp KP_NUM
-                                           &kp LGUI     &trans       &kp SPACE                   &kp RET       &trans     &kp RALT
+   &kp DE_LT    &kp DE_AT     &kp DE_EXCL  &kp DE_LBRC  &kp DE_RBRC  &kp DE_DQT               &kp DE_EQUAL  &kp DE_N7  &kp DE_N8  &kp DE_N9  &kp DE_PLUS   &kp DE_ASTRK
+   &kp DE_PIPE  &kp DE_POUND  &kp DE_DLLR  &kp DE_LPAR  &kp DE_RPAR  &kp DE_SQT               &kp DE_QMARK  &kp DE_N4  &kp DE_N5  &kp DE_N6  &kp DE_MINUS  &kp DE_SLASH
+   &kp DE_GT    &kp DE_PRCNT  &kp DE_AMPS  &kp DE_LBKT  &kp DE_RBKT  &td1                     &kp DE_N0     &kp DE_N1  &kp DE_N2  &kp DE_N3  &kp DE_BSLH   &kp KP_NUM
+                                           &kp LGUI     &trans       &kp SPACE                &kp RET       &trans     &kp RALT
                         >;
                 };
                 mac_layer {
