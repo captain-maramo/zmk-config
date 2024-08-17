@@ -33,7 +33,7 @@
                 td0: tap_dance_tilde_esc {
                         compatible = "zmk,behavior-tap-dance";
                         #binding-cells = <0>;
-                        tapping-term-ms = <200>;
+                        tapping-term-ms = <500>;
                         bindings = <&kp DE_TILDE>, <&kp ESC>;
                 };
                 td1: tap_dance_acute_grave {
@@ -51,7 +51,7 @@
 // -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // |   ~ + ESC  |    Q    |    W    |    E    |        R       |    T           |              |    Y             |        U       |      I      |     O     |       P        |       ü       |
 // |     ^      |    A    |    S    |    D    |    F + SHFT    |  G + Symbols   |              |    H + Symbols   |    J + SHFT    |      K      |     L     |       ö        |       ä       |
-// |            |    Z    |    X    |    C    |        V       |    B           |              |    N             |        M       |      ,      |     .     |       /        |       ß       |
+// |            |    Z    |    X    |    C    |        V       |    B           |              |    N             |        M       |      ,      |     .     |       -        |       ß       |
 //                                  |   GUI   |       SPC      |    Backspace   |              |   RSE            |       ENT      |             |
                         bindings = <
    &td0          &kp DE_Q  &kp DE_W  &kp DE_E  &kp DE_R         &kp DE_T                        &kp DE_Z          &kp DE_U         &kp DE_I      &kp DE_O    &kp DE_P         &kp DE_U_UMLAUT
