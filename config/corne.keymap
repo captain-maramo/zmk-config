@@ -33,13 +33,13 @@
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
                         bindings
-                            = <&macro_tap &kp DE_PIPE>;
+                            = <&macro_tap &kp DE_CARET>;
                 };
                 mac_gt: mac_gt {
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
                         bindings
-                            = <&macro_tap &kp LS(DE_PIPE)>;
+                            = <&macro_tap &kp LS(DE_CARET)>;
                 };
                 mac_lbrc: mac_lbrc {
                         compatible = "zmk,behavior-macro";
