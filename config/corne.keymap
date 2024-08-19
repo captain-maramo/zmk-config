@@ -63,7 +63,7 @@
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
                         bindings
-                            = <&macro_tap &kp RA(DE_Z)>;
+                            = <&macro_tap &kp RA(DE_Y)>;
                 };
                 mac_at: mac_at {
                         compatible = "zmk,behavior-macro";
