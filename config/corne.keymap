@@ -21,67 +21,67 @@
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
                         bindings
-                        = <&macro_press &kp DE_LT>;
+                        = <&macro_tap &kp DE_LT>;
                 };
                 mac_pipe: mac_pipe {
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
                         bindings
-                            = <&macro_press &kp DE_LBRC>;
+                            = <&macro_tap &kp DE_LBRC>;
                 };
                 mac_lt: mac_lt {
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
                         bindings
-                            = <&macro_press &kp DE_PIPE>;
+                            = <&macro_tap &kp DE_PIPE>;
                 };
                 mac_gt: mac_gt {
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
                         bindings
-                            = <&macro_press &kp LS(DE_PIPE)>;
+                            = <&macro_tap &kp LS(DE_PIPE)>;
                 };
                 mac_lbrc: mac_lbrc {
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
                         bindings
-                            = <&macro_press &kp DE_LBKT>;
+                            = <&macro_tap &kp DE_LBKT>;
                 };
                 mac_rbrc: mac_rbrc {
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
                         bindings
-                            = <&macro_press &kp DE_RBKT>;
+                            = <&macro_tap &kp DE_RBKT>;
                 };
                 mac_tilde: mac_tilde {
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
                         bindings
-                            = <&macro_press &kp LA(DE_N)>;
+                            = <&macro_tap &kp LA(DE_N)>;
                 };
                 mac_bslh: mac_bslh {
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
                         bindings
-                            = <&macro_press &kp RA(DE_Z)>;
+                            = <&macro_tap &kp RA(DE_Z)>;
                 };
                 mac_at: mac_at {
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
                         bindings
-                            = <&macro_press &kp LA(DE_L)>;
+                            = <&macro_tap &kp LA(DE_L)>;
                 };
                 mac_lbkt: mac_lbkt {
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
                         bindings
-                            = <&macro_press &kp LA(DE_N5)>;
+                            = <&macro_tap &kp LA(DE_N5)>;
                 };
                 mac_rbkt: mac_rbkt {
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
                         bindings
-                            = <&macro_press &kp LA(DE_N6)>;
+                            = <&macro_tap &kp LA(DE_N6)>;
                 };
             };
         combos {
