@@ -101,6 +101,22 @@
                 };
         };
         behaviors {
+                hm: homerow_mods {
+                        compatible = "zmk,behavior-hold-tap";
+                        #binding-cells = <2>;
+                        tapping-term-ms = <150>;
+                        quick-tap-ms = <0>;
+                        flavor = "tap-preferred";
+                        bindings = <&kp>, <&kp>;
+                };
+                hml: homerow_mods_layer {
+                        compatible = "zmk,behavior-hold-tap";
+                        #binding-cells = <2>;
+                        tapping-term-ms = <150>;
+                        quick-tap-ms = <0>;
+                        flavor = "tap-preferred";
+                        bindings = <&lt>, <&kp>;
+                    };
                 td0: tap_dance_tilde_esc {
                         compatible = "zmk,behavior-tap-dance";
                         #binding-cells = <0>;
@@ -168,7 +184,7 @@
 //                                                              |   GUI         |   Backspace   |     SPC       |               |   TAB         |       ENT     |               |
                         bindings = <
     &td3                &kp DE_Q                &kp DE_W        &kp DE_E        &kp DE_R        &kp DE_T                        &kp DE_Z        &kp DE_U        &kp DE_I        &kp DE_O        &kp DE_P                        &kp DE_U_UMLAUT
-    &mac_caret          &lt MACSYMBOLS DE_A     &mt LALT DE_S   &mt LCTRL DE_D  &mt LSHIFT DE_F &kp DE_G                        &kp DE_H        &mt RSHIFT DE_J &mt RCTRL DE_K  &mt RALT DE_L   &lt MACSYMBOLS DE_O_UMLAUT      &kp DE_A_UMLAUT
+    &mac_caret          &hml MACSYMBOLS DE_A    &hm LALT DE_S   &hm LCTRL DE_D  &hm LSHIFT DE_F &kp DE_G                        &kp DE_H        &hm RSHIFT DE_J &hm RCTRL DE_K  &hm RALT DE_L   &hml MACSYMBOLS DE_O_UMLAUT      &kp DE_A_UMLAUT
     &mo SETTINGS        &kp DE_Y                &kp DE_X        &kp DE_C        &kp DE_V        &kp DE_B                        &kp DE_N        &kp DE_M        &kp DE_COMMA    &kp DE_DOT      &kp DE_MINUS                    &kp DE_SZ
                                                                 &kp LGUI        &kp BSPC        &kp SPACE                       &kp RET         &kp TAB         &to MACSYMBOLS
                         >;
