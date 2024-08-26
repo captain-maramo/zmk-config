@@ -115,7 +115,7 @@
                         tapping-term-ms = <150>;
                         quick-tap-ms = <0>;
                         flavor = "tap-preferred";
-                        bindings = <&lt>, <&kp>;
+                        bindings = <&mo>, <&kp>;
                     };
                 td0: tap_dance_tilde_esc {
                         compatible = "zmk,behavior-tap-dance";
