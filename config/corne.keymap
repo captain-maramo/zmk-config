@@ -166,12 +166,12 @@
 //  |  <        |  @            |  !            |  {            |  }            |  "       |                    |  =            |  7            |  8            |  9            |  +            |  *            |
 //  |  |        |  #            |  $ + §        |  (            |  )            |  '       |                    |  ?            |  4            |  5            |  6            |  -            |  /            |
 //  |  >        |  %            |  &            |  [            |  ]            |  ´ + `   |                    |  0            |  1            |  2            |  3            |  \            |NMLCK          |
-//                                              | GUI           |     DEL       |          |                    | ENT           |  TAB          | to Linux      |
+//                                              | GUI           |     DEL       |  CAPS    |                    | ENT           |  TAB          | to Linux      |
                         bindings = <
     &kp DE_LT    &kp DE_AT      &kp DE_EXCL     &kp DE_LBRC     &kp DE_RBRC     &kp DE_DQT                      &kp DE_EQUAL    &kp DE_N7       &kp DE_N8       &kp DE_N9       &kp DE_PLUS     &kp DE_ASTRK
     &kp DE_PIPE  &kp DE_POUND   &td2            &kp DE_LPAR     &kp DE_RPAR     &kp DE_SQT                      &kp DE_QMARK    &kp DE_N4       &kp DE_N5       &kp DE_N6       &kp DE_MINUS    &kp DE_SLASH
     &kp DE_GT    &kp DE_PRCNT   &kp DE_AMPS     &kp DE_LBKT     &kp DE_RBKT     &td1                            &kp DE_N0       &kp DE_N1       &kp DE_N2       &kp DE_N3       &kp DE_BSLH     &kp KP_NUM
-                                                &kp LGUI        &kp DEL         &trans                          &kp RET         &kp TAB         &to LINUX
+                                                &kp LGUI        &kp DEL         &caps_word                      &kp RET         &kp TAB         &to LINUX
                         >;
                 };
 
@@ -196,12 +196,12 @@
 // |  <         |  @            |  !            |  {            |  }            |  "            |              |  =             |  7            |  8            |  9            |  +            |  *            |
 // |  |         |  #            |  $ + §        |  (            |  )            |  '            |              |  ?             |  4            |  5            |  6            |  -            |  /            |
 // |  >         |  %            |  &            |  [            |  ]            |  ´ + `        |              |  0             |  1            |  2            |  3            |  \            |NMLCK          |
-//                                              | GUI           |     DEL       |               |              | ENT            |  TAB          | to MAC        |
+//                                              | GUI           |     DEL       |  CAPS         |              | ENT            |  TAB          | to MAC        |
                         bindings = <
    &mac_lt      &mac_at         &kp DE_EXCL     &mac_lbrc       &mac_rbrc       &kp DE_DQT                      &kp DE_EQUAL    &kp DE_N7       &kp DE_N8       &kp DE_N9       &kp DE_PLUS     &kp DE_ASTRK
    &mac_pipe    &kp DE_POUND    &td2            &kp DE_LPAR     &kp DE_RPAR     &kp DE_SQT                      &kp DE_QMARK    &kp DE_N4       &kp DE_N5       &kp DE_N6       &kp DE_MINUS    &kp DE_SLASH
    &mac_gt      &kp DE_PRCNT    &kp DE_AMPS     &mac_lbkt       &mac_rbkt       &td1                            &kp DE_N0       &kp DE_N1       &kp DE_N2       &kp DE_N3       &mac_bslh       &kp KP_NUM
-                                                &kp LGUI        &kp DEL         &trans                          &kp RET         &kp TAB         &to MAC
+                                                &kp LGUI        &kp DEL         &caps_word                      &kp RET         &kp TAB         &to MAC
                         >;
                 };
 
