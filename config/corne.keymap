@@ -122,11 +122,21 @@
                 hml: homerow_mods_layer {
                         compatible = "zmk,behavior-hold-tap";
                         #binding-cells = <2>;
-                        tapping-term-ms = <150>;
-                        quick-tap-ms = <0>;
-                        flavor = "tap-preferred";
+                        tapping-term-ms = <400>;
+                        quick-tap-ms = <200>;
+                        flavor = "tap-unless-interrupted";
                         bindings = <&mo>, <&kp>;
-                    };
+                        hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41>;
+                };
+                hmr: homerow_mods_layer {
+                        compatible = "zmk,behavior-hold-tap";
+                        #binding-cells = <2>;
+                        tapping-term-ms = <400>;
+                        quick-tap-ms = <200>;
+                        flavor = "tap-unless-interrupted";
+                        bindings = <&mo>, <&kp>;
+                        hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
+                };
                 td0: tap_dance_tilde_esc {
                         compatible = "zmk,behavior-tap-dance";
                         #binding-cells = <0>;
@@ -158,15 +168,15 @@
                 default_layer {
                         display-name = "linux";
 // ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// |   ~ + ESC          |    Q          |    W                  |    E          |        R      |    T          |                       |    Y          |        U      |      I        |     O         |       P               |       ü       |
-// |     ^              |    A          |    S                  |    D          |    F + SHFT   |    G          |                       |    H          |    J + SHFT   |      K        |     L         |       ö               |       ä       |
-// |  SETTINGS          |    Z          |    X                  |    C          |        V      |    B          |                       |    N          |        M      |      ,        |     .         |       -               |       ß       |
-//                                                              |   GUI         |   Backspace   | SPC           |                       |   ENT         |       TAB     |    SYMBOLS    |
+// |   ~ + ESC          |    Q                  |    W                  |    E          |        R      |    T          |                       |    Y          |        U      |      I        |     O         |       P               |       ü       |
+// |     ^              |    A                  |    S                  |    D          |    F + SHFT   |    G          |                       |    H          |    J + SHFT   |      K        |     L         |       ö               |       ä       |
+// |  SETTINGS          |    Z                  |    X                  |    C          |        V      |    B          |                       |    N          |        M      |      ,        |     .         |       -               |       ß       |
+//                                                                      |   GUI         |   Backspace   | SPC           |                       |   ENT         |       TAB     |    SYMBOLS    |
                         bindings = <
-    &td0                &kp DE_Q                &kp DE_W        &kp DE_E        &kp DE_R        &kp DE_T                                &kp DE_Z        &kp DE_U        &kp DE_I        &kp DE_O        &kp DE_P                &kp DE_U_UMLAUT
-    &kp DE_CARET        &lt SYMBOLS DE_A        &hl LALT DE_S   &hl LCTRL DE_D  &hl LSHIFT DE_F &kp DE_G                                &kp DE_H        &hr RSHIFT DE_J &hr RCTRL DE_K  &hr RALT DE_L   &lt SYMBOLS DE_O_UMLAUT &kp DE_A_UMLAUT
-    &mo SETTINGS        &kp DE_Y                &kp DE_X        &kp DE_C        &kp DE_V        &kp DE_B                                &kp DE_N        &kp DE_M        &kp DE_COMMA    &kp DE_DOT      &kp DE_MINUS            &kp DE_SZ
-                                                                &kp LGUI        &kp BSPC        &kp SPACE                               &kp RET         &kp TAB         &to SYMBOLS
+    &td0                &kp DE_Q                &kp DE_W                &kp DE_E        &kp DE_R        &kp DE_T                                &kp DE_Z        &kp DE_U        &kp DE_I        &kp DE_O        &kp DE_P                 &kp DE_U_UMLAUT
+    &kp DE_CARET        &hml SYMBOLS DE_A       &hl LALT DE_S           &hl LCTRL DE_D  &hl LSHIFT DE_F &kp DE_G                                &kp DE_H        &hr RSHIFT DE_J &hr RCTRL DE_K  &hr RALT DE_L   &hmr SYMBOLS DE_O_UMLAUT &kp DE_A_UMLAUT
+    &mo SETTINGS        &kp DE_Y                &kp DE_X                &kp DE_C        &kp DE_V        &kp DE_B                                &kp DE_N        &kp DE_M        &kp DE_COMMA    &kp DE_DOT      &kp DE_MINUS             &kp DE_SZ
+                                                                        &kp LGUI        &kp BSPC        &kp SPACE                               &kp RET         &kp TAB         &to SYMBOLS
                         >;
                 };
 
@@ -194,7 +204,7 @@
 //                                                              |   GUI         |   Backspace   |     SPC       |               |   ENT         |       TAB     |    SYMBOLS    |
                         bindings = <
     &td3                &kp DE_Q                &kp DE_W        &kp DE_E        &kp DE_R        &kp DE_T                        &kp DE_Z        &kp DE_U        &kp DE_I        &kp DE_O        &kp DE_P                        &kp DE_U_UMLAUT
-    &mac_caret          &hml MACSYMBOLS DE_A    &hl LALT DE_S   &hl LCTRL DE_D  &hl LSHIFT DE_F &kp DE_G                        &kp DE_H        &hr RSHIFT DE_J &hr RCTRL DE_K  &hr RALT DE_L   &hml MACSYMBOLS DE_O_UMLAUT     &kp DE_A_UMLAUT
+    &mac_caret          &hml MACSYMBOLS DE_A    &hl LALT DE_S   &hl LCTRL DE_D  &hl LSHIFT DE_F &kp DE_G                        &kp DE_H        &hr RSHIFT DE_J &hr RCTRL DE_K  &hr RALT DE_L   &hmr MACSYMBOLS DE_O_UMLAUT     &kp DE_A_UMLAUT
     &mo SETTINGS        &kp DE_Y                &kp DE_X        &kp DE_C        &kp DE_V        &kp DE_B                        &kp DE_N        &kp DE_M        &kp DE_COMMA    &kp DE_DOT      &kp DE_MINUS                    &kp DE_SZ
                                                                 &kp LGUI        &kp BSPC        &kp SPACE                       &kp RET         &kp TAB         &to MACSYMBOLS
                         >;
