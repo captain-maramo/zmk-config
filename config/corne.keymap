@@ -84,30 +84,6 @@
                         bindings
                             = <&macro_tap &kp LA(DE_N6)>;
                 };
-                mac_copy: mac_copy {
-                        compatible = "zmk,behavior-macro";
-                        #binding-cells = <0>;
-                        bindings
-                            = <&macro_tap &kp LGUI &kp DE_C>;
-                };
-                mac_paste: mac_paste {
-                        compatible = "zmk,behavior-macro";
-                        #binding-cells = <0>;
-                        bindings
-                            = <&macro_tap &kp LGUI &kp DE_V>;
-                };
-                copy: copy {
-                        compatible = "zmk,behavior-macro";
-                        #binding-cells = <0>;
-                        bindings
-                            = <&macro_tap &kp LCTRL &kp DE_C>;
-                };
-                paste: paste {
-                        compatible = "zmk,behavior-macro";
-                        #binding-cells = <0>;
-                        bindings
-                            = <&macro_tap &kp LCTRL &kp DE_V>;
-                };
             };
         combos {
                 compatible = "zmk,combos";
@@ -189,13 +165,13 @@
                         compatible = "zmk,behavior-tap-dance";
                         #binding-cells = <0>;
                         tapping-term-ms = <500>;
-                        bindings = <&copy>, <&paste>;
+                        bindings = <&kp LC(DE_C)>, <&kp LC(DE_V)>;
                 };
                 mcp: mac_copy_paste {
                         compatible = "zmk,behavior-tap-dance";
                         #binding-cells = <0>;
                         tapping-term-ms = <500>;
-                        bindings = <&mac_copy>, <&mac_paste>;
+                        bindings = <&kp LG(DE_C)>, <&kp LG(DE_V)>;
                 };
         };
         keymap {
