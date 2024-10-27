@@ -173,13 +173,13 @@
                         tapping-term-ms = <500>;
                         bindings = <&kp LG(DE_C)>, <&kp LG(DE_V)>;
                 };
-                bf: back_forth {
+                bf: back_forward {
                         compatible = "zmk,behavior-tap-dance";
                         #binding-cells = <0>;
                         tapping-term-ms = <500>;
                         bindings = <&kp LC(DE_Z)>, <&kp LC(LS(DE_Z))>;
                 };
-                mbf: mac_back_forth {
+                mbf: mac_back_forward {
                         compatible = "zmk,behavior-tap-dance";
                         #binding-cells = <0>;
                         tapping-term-ms = <500>;
@@ -210,7 +210,7 @@
 //  |  <        |  @            |  !            |  {            |  }            |  "       |                    |  =            |  7            |  8            |  9            |  +            |  *            |
 //  |  |        |  #            |  $ + §        |  (            |  )            |  '       |                    |  ?            |  4            |  5            |  6            |  -            |  /            |
 //  |  >        |  %            |  &            |  [            |  ]            |  ´ + `   |                    |  0            |  1            |  2            |  3            |  \            |NMLCK          |
-//                                              | GUI           |     DEL       |  CAPS    |                    | ENT           |  TAB          | back-forth    |
+//                                              | GUI           |     DEL       |  CAPS    |                    | ENT           |  TAB          | back-forward  |
                         bindings = <
     &kp DE_LT    &kp DE_AT      &kp DE_EXCL     &kp DE_LBRC     &kp DE_RBRC     &kp DE_DQT                      &kp DE_EQUAL    &kp DE_N7       &kp DE_N8       &kp DE_N9       &kp DE_PLUS     &kp DE_ASTRK
     &kp DE_PIPE  &kp DE_POUND   &td2            &kp DE_LPAR     &kp DE_RPAR     &kp DE_SQT                      &kp DE_QMARK    &kp DE_N4       &kp DE_N5       &kp DE_N6       &kp DE_MINUS    &kp DE_SLASH
@@ -240,7 +240,7 @@
 // |  <         |  @            |  !            |  {            |  }            |  "            |              |  =             |  7            |  8            |  9            |  +            |  *            |
 // |  |         |  #            |  $ + §        |  (            |  )            |  '            |              |  ?             |  4            |  5            |  6            |  -            |  /            |
 // |  >         |  %            |  &            |  [            |  ]            |  ´ + `        |              |  0             |  1            |  2            |  3            |  \            |NMLCK          |
-//                                              | GUI           |     DEL       |  CAPS         |              | ENT            |  TAB          | mac-back-forth|
+//                                              | GUI           |     DEL       |  CAPS         |              | ENT            |  TAB          |mac-backforward|
                         bindings = <
    &mac_lt      &mac_at         &kp DE_EXCL     &mac_lbrc       &mac_rbrc       &kp DE_DQT                      &kp DE_EQUAL    &kp DE_N7       &kp DE_N8       &kp DE_N9       &kp DE_PLUS     &kp DE_ASTRK
    &mac_pipe    &kp DE_POUND    &td2            &kp DE_LPAR     &kp DE_RPAR     &kp DE_SQT                      &kp DE_QMARK    &kp DE_N4       &kp DE_N5       &kp DE_N6       &kp DE_MINUS    &kp DE_SLASH
