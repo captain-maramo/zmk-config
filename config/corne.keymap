@@ -84,6 +84,30 @@
                         bindings
                             = <&macro_tap &kp LA(DE_N6)>;
                 };
+                mac_copy: mac_copy {
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings
+                            = <&macro_tap &kp LGUI &kp DE_C>;
+                };
+                mac_paste: mac_paste {
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings
+                            = <&macro_tap &kp LGUI &kp DE_V>;
+                };
+                copy: copy {
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings
+                            = <&macro_tap &kp LCTRL &kp DE_C>;
+                };
+                paste: paste {
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings
+                            = <&macro_tap &kp LCTRL &kp DE_V>;
+                };
             };
         combos {
                 compatible = "zmk,combos";
@@ -161,6 +185,18 @@
                         tapping-term-ms = <500>;
                         bindings = <&mac_tilde>, <&kp ESC>;
                 };
+                cp: copy_paste {
+                        compatible = "zmk,behavior-tap-dance";
+                        #binding-cells = <0>;
+                        tapping-term-ms = <500>;
+                        bindings = <&copy>, <&paste>;
+                };
+                mcp: mac_copy_paste {
+                        compatible = "zmk,behavior-tap-dance";
+                        #binding-cells = <0>;
+                        tapping-term-ms = <500>;
+                        bindings = <&mac_copy>, <&mac_paste>;
+                };
         };
         keymap {
                 compatible = "zmk,keymap";
@@ -171,12 +207,12 @@
 // |   ~ + ESC          |    Q                  |    W                  |    E          |        R      |    T          |                       |    Y          |        U      |      I        |     O         |       P               |       ü       |
 // |     ^              |    A                  |    S                  |    D          |    F + SHFT   |    G          |                       |    H          |    J + SHFT   |      K        |     L         |       ö               |       ä       |
 // |  SETTINGS          |    Z                  |    X                  |    C          |        V      |    B          |                       |    N          |        M      |      ,        |     .         |       -               |       ß       |
-//                                                                      |   GUI         |   Backspace   | SPC           |                       |   ENT         |       TAB     |    SYMBOLS    |
+//                                                                      |   GUI         |   Backspace   | SPC           |                       |   ENT         |       TAB     |   copy-paste  |
                         bindings = <
     &td0                &kp DE_Q                &kp DE_W                &kp DE_E        &kp DE_R        &kp DE_T                                &kp DE_Z        &kp DE_U        &kp DE_I        &kp DE_O        &kp DE_P                 &kp DE_U_UMLAUT
     &kp DE_CARET        &hml SYMBOLS DE_A       &hl LALT DE_S           &hl LCTRL DE_D  &hl LSHIFT DE_F &kp DE_G                                &kp DE_H        &hr RSHIFT DE_J &hr RCTRL DE_K  &hr RALT DE_L   &hmr SYMBOLS DE_O_UMLAUT &kp DE_A_UMLAUT
     &mo SETTINGS        &kp DE_Y                &kp DE_X                &kp DE_C        &kp DE_V        &kp DE_B                                &kp DE_N        &kp DE_M        &kp DE_COMMA    &kp DE_DOT      &kp DE_MINUS             &kp DE_SZ
-                                                                        &kp LGUI        &kp BSPC        &kp SPACE                               &kp RET         &kp TAB         &to SYMBOLS
+                                                                        &kp LGUI        &kp BSPC        &kp SPACE                               &kp RET         &kp TAB         &kp cp
                         >;
                 };
 
@@ -201,12 +237,12 @@
 //  |   ~ + ESC         |    Q                  |    W          |    E          |        R      |    T          |               |    Y          |        U      |      I        |     O         |       P                       |       ü       |
 //  |     ^             |    A                  |    S          |    D          |    F + SHFT   |    G          |               |    H          |    J + SHFT   |      K        |     L         |       ö                       |       ä       |
 //  |  SETTINGS         |    Z                  |    X          |    C          |        V      |    B          |               |    N          |        M      |      ,        |     .         |       -                       |       ß       |
-//                                                              |   GUI         |   Backspace   |     SPC       |               |   ENT         |       TAB     |    SYMBOLS    |
+//                                                              |   GUI         |   Backspace   |     SPC       |               |   ENT         |       TAB     |   copy-paste  |
                         bindings = <
     &td3                &kp DE_Q                &kp DE_W        &kp DE_E        &kp DE_R        &kp DE_T                        &kp DE_Z        &kp DE_U        &kp DE_I        &kp DE_O        &kp DE_P                        &kp DE_U_UMLAUT
     &mac_caret          &hml MACSYMBOLS DE_A    &hl LALT DE_S   &hl LCTRL DE_D  &hl LSHIFT DE_F &kp DE_G                        &kp DE_H        &hr RSHIFT DE_J &hr RCTRL DE_K  &hr RALT DE_L   &hmr MACSYMBOLS DE_O_UMLAUT     &kp DE_A_UMLAUT
     &mo SETTINGS        &kp DE_Y                &kp DE_X        &kp DE_C        &kp DE_V        &kp DE_B                        &kp DE_N        &kp DE_M        &kp DE_COMMA    &kp DE_DOT      &kp DE_MINUS                    &kp DE_SZ
-                                                                &kp LGUI        &kp BSPC        &kp SPACE                       &kp RET         &kp TAB         &to MACSYMBOLS
+                                                                &kp LGUI        &kp BSPC        &kp SPACE                       &kp RET         &kp TAB         &kp mcp
                         >;
                 };
 
