@@ -119,14 +119,6 @@
                         bindings = <&kp>, <&kp>;
                         hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
                 };
-                hm: homerow_mods {
-                        compatible = "zmk,behavior-hold-tap";
-                        #binding-cells = <2>;
-                        tapping-term-ms = <150>;
-                        quick-tap-ms = <0>;
-                        flavor = "tap-preferred";
-                        bindings = <&kp>, <&kp>;
-                };
                 hml: homerow_mods_layer {
                         compatible = "zmk,behavior-hold-tap";
                         #binding-cells = <2>;
@@ -202,7 +194,7 @@
 //                                                              |   GUI         |   Backspace   |     SPC       |               |   ENT         |       TAB     |    SYMBOLS    |
                         bindings = <
     &td3                &kp DE_Q                &kp DE_W        &kp DE_E        &kp DE_R        &kp DE_T                        &kp DE_Z        &kp DE_U        &kp DE_I        &kp DE_O        &kp DE_P                        &kp DE_U_UMLAUT
-    &mac_caret          &hml MACSYMBOLS DE_A    &hm LALT DE_S   &hm LCTRL DE_D  &hm LSHIFT DE_F &kp DE_G                        &kp DE_H        &hm RSHIFT DE_J &hm RCTRL DE_K  &hm RALT DE_L   &hml MACSYMBOLS DE_O_UMLAUT     &kp DE_A_UMLAUT
+    &mac_caret          &hml MACSYMBOLS DE_A    &hl LALT DE_S   &hl LCTRL DE_D  &hl LSHIFT DE_F &kp DE_G                        &kp DE_H        &hr RSHIFT DE_J &hr RCTRL DE_K  &hr RALT DE_L   &hml MACSYMBOLS DE_O_UMLAUT     &kp DE_A_UMLAUT
     &mo SETTINGS        &kp DE_Y                &kp DE_X        &kp DE_C        &kp DE_V        &kp DE_B                        &kp DE_N        &kp DE_M        &kp DE_COMMA    &kp DE_DOT      &kp DE_MINUS                    &kp DE_SZ
                                                                 &kp LGUI        &kp BSPC        &kp SPACE                       &kp RET         &kp TAB         &to MACSYMBOLS
                         >;
